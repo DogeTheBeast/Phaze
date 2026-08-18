@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phaze2 — Library</title>
+<link rel="stylesheet" href="../assets/app.css">
+</head>
+<body class="stage">
+<div class="phone">
+  <div class="statusbar">
+    <span class="time">9:41</span>
+    <span class="status-icons">
+      <svg class="i12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+      <svg class="i14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="17" height="10" rx="2.5"/><rect x="4" y="9" width="10" height="6" rx="1" fill="currentColor" stroke="none"/><path d="M21 10v4" stroke-linecap="round"/></svg>
+    </span>
+  </div>
+  <div class="screen">
+    <header class="appbar">
+      <span class="title">Library</span>
+      <a class="iconbtn" href="search.html" aria-label="Search">
+        <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+      </a>
+    </header>
+
+    <div class="tabs" data-tabgroup>
+      <button class="tab active" data-tab="artists">Artists</button>
+      <button class="tab" data-tab="albums">Albums</button>
+      <button class="tab" data-tab="songs">Songs</button>
+      <button class="tab" data-tab="playlists">Playlists</button>
+    </div>
+
+    <div class="content" data-panel="artists">
+      <div class="alpha"><span>A</span><span>B</span><span>F</span><span>K</span><span>M</span><span>N</span><span>R</span><span>S</span><span>T</span></div>
+      <a class="row" href="artist.html">
+        <div class="art art-circle art-row" style="--g1:#f6d365;--g2:#fda085"><span>K</span></div>
+        <div class="grow">
+          <div class="t">Khruangbin</div>
+          <div class="s">3 albums</div>
+        </div>
+        <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+      <a class="row" href="artist.html">
+        <div class="art art-circle art-row" style="--g1:#a18cd1;--g2:#fbc2eb"><span>T</span></div>
+        <div class="grow">
+          <div class="t">Tame Impala</div>
+          <div class="s">4 albums</div>
+        </div>
+        <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+      <a class="row" href="artist.html">
+        <div class="art art-circle art-row" style="--g1:#667eea;--g2:#764ba2"><span>N</span></div>
+        <div class="grow">
+          <div class="t">Nujabes</div>
+          <div class="s">2 albums</div>
+        </div>
+        <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+      <a class="row" href="artist.html">
+        <div class="art art-circle art-row" style="--g1:#89f7fe;--g2:#66a6ff"><span>F</span></div>
+        <div class="grow">
+          <div class="t">Fleet Foxes</div>
+          <div class="s">3 albums</div>
+        </div>
+        <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+      <a class="row" href="artist.html">
+        <div class="art art-circle art-row" style="--g1:#f83600;--g2:#f9d423"><span>R</span></div>
+        <div class="grow">
+          <div class="t">Radiohead</div>
+          <div class="s">9 albums</div>
+        </div>
+        <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+      <a class="row" href="artist.html">
+        <div class="art art-circle art-row" style="--g1:#0ba360;--g2:#3cba92"><span>B</span></div>
+        <div class="grow">
+          <div class="t">Bonobo</div>
+          <div class="s">7 albums</div>
+        </div>
+        <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+      <a class="row" href="artist.html">
+        <div class="art art-circle art-row" style="--g1:#c79081;--g2:#dfa579"><span>S</span></div>
+        <div class="grow">
+          <div class="t">Sufjan Stevens</div>
+          <div class="s">6 albums</div>
+        </div>
+        <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+      <a class="row" href="artist.html">
+        <div class="art art-circle art-row" style="--g1:#30cfd0;--g2:#330867"><span>M</span></div>
+        <div class="grow">
+          <div class="t">Men I Trust</div>
+          <div class="s">3 albums</div>
+        </div>
+        <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+    </div>
+
+    <div class="content hidden" data-panel="albums">
+      <!-- tab panels are revealed by app.js; albums/songs/playlists start hidden -->
+      <div class="grid2" style="margin-top:16px">
+        <a class="card" href="album.html">
+          <div class="art art-card" style="--g1:#f6d365;--g2:#fda085"><span>MK</span><span class="dl-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span></div>
+          <div class="t">Mordechai</div>
+          <div class="s">Khruangbin · 2020</div>
+        </a>
+        <a class="card" href="album.html">
+          <div class="art art-card" style="--g1:#a18cd1;--g2:#fbc2eb"><span>TI</span><span class="dl-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span></div>
+          <div class="t">Currents</div>
+          <div class="s">Tame Impala · 2015</div>
+        </a>
+        <a class="card" href="album.html">
+          <div class="art art-card" style="--g1:#667eea;--g2:#764ba2"><span>NJ</span></div>
+          <div class="t">Modal Soul</div>
+          <div class="s">Nujabes · 2005</div>
+        </a>
+        <a class="card" href="album.html">
+          <div class="art art-card" style="--g1:#89f7fe;--g2:#66a6ff"><span>FF</span><span class="dl-progress" style="--p:62%"></span></div>
+          <div class="t">Helplessness Blues</div>
+          <div class="s">Fleet Foxes · 2011</div>
+        </a>
+        <a class="card" href="album.html">
+          <div class="art art-card" style="--g1:#f83600;--g2:#f9d423"><span>RH</span><span class="dl-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span></div>
+          <div class="t">In Rainbows</div>
+          <div class="s">Radiohead · 2007</div>
+        </a>
+        <a class="card" href="album.html">
+          <div class="art art-card" style="--g1:#0ba360;--g2:#3cba92"><span>BM</span></div>
+          <div class="t">Migration</div>
+          <div class="s">Bonobo · 2017</div>
+        </a>
+        <a class="card" href="album.html">
+          <div class="art art-card" style="--g1:#c79081;--g2:#dfa579"><span>SS</span><span class="dl-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span></div>
+          <div class="t">Carrie &amp; Lowell</div>
+          <div class="s">Sufjan Stevens · 2015</div>
+        </a>
+        <a class="card" href="album.html">
+          <div class="art art-card" style="--g1:#30cfd0;--g2:#330867"><span>MI</span></div>
+          <div class="t">Untourable Album</div>
+          <div class="s">Men I Trust · 2021</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="content hidden" data-panel="songs">
+      <div style="margin-top:8px">
+        <div class="row">
+          <span class="idx">1</span>
+          <div class="art art-xs" style="--g1:#f6d365;--g2:#fda085"><span>MK</span></div>
+          <div class="grow">
+            <div class="t">Time (You and I)</div>
+            <div class="s">Khruangbin</div>
+          </div>
+          <span class="dur">5:42</span>
+          <svg class="i18 dl-state" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <button class="iconbtn" aria-label="More"><svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+        </div>
+        <div class="row">
+          <span class="idx">2</span>
+          <div class="art art-xs" style="--g1:#f6d365;--g2:#fda085"><span>MK</span></div>
+          <div class="grow">
+            <div class="t">The Answer Is</div>
+            <div class="s">Khruangbin</div>
+          </div>
+          <span class="dur">3:46</span>
+          <svg class="i18 dl-state" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <button class="iconbtn" aria-label="More"><svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+        </div>
+        <div class="row">
+          <span class="idx">3</span>
+          <div class="art art-xs" style="--g1:#f6d365;--g2:#fda085"><span>MK</span></div>
+          <div class="grow">
+            <div class="t">Father Bird, Mother Bird</div>
+            <div class="s">Khruangbin</div>
+          </div>
+          <span class="dur">3:05</span>
+          <svg class="i18 dl-state pending" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          <button class="iconbtn" aria-label="More"><svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+        </div>
+        <div class="row">
+          <span class="idx">4</span>
+          <div class="art art-xs" style="--g1:#f6d365;--g2:#fda085"><span>MK</span></div>
+          <div class="grow">
+            <div class="t">If There Is No Question</div>
+            <div class="s">Khruangbin</div>
+          </div>
+          <span class="dur">5:27</span>
+          <svg class="i18 dl-state pending" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          <button class="iconbtn" aria-label="More"><svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+        </div>
+        <div class="row">
+          <span class="idx">5</span>
+          <div class="art art-xs" style="--g1:#f6d365;--g2:#fda085"><span>MK</span></div>
+          <div class="grow">
+            <div class="t">Pelota</div>
+            <div class="s">Khruangbin</div>
+          </div>
+          <span class="dur">2:49</span>
+          <svg class="i18 dl-state" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <button class="iconbtn" aria-label="More"><svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+        </div>
+        <div class="row">
+          <span class="idx">6</span>
+          <div class="art art-xs" style="--g1:#f6d365;--g2:#fda085"><span>MK</span></div>
+          <div class="grow">
+            <div class="t">First Class</div>
+            <div class="s">Khruangbin</div>
+          </div>
+          <span class="dur">4:42</span>
+          <svg class="i18 dl-state" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <button class="iconbtn" aria-label="More"><svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+        </div>
+        <div class="row">
+          <span class="idx">7</span>
+          <div class="art art-xs" style="--g1:#f6d365;--g2:#fda085"><span>MK</span></div>
+          <div class="grow">
+            <div class="t">Hold It Up</div>
+            <div class="s">Khruangbin</div>
+          </div>
+          <span class="dur">4:31</span>
+          <svg class="i18 dl-state pending" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          <button class="iconbtn" aria-label="More"><svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+        </div>
+        <div class="row">
+          <span class="idx">8</span>
+          <div class="art art-xs" style="--g1:#f6d365;--g2:#fda085"><span>MK</span></div>
+          <div class="grow">
+            <div class="t">Connaissais de Face</div>
+            <div class="s">Khruangbin</div>
+          </div>
+          <span class="dur">3:38</span>
+          <svg class="i18 dl-state pending" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          <button class="iconbtn" aria-label="More"><svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="content hidden" data-panel="playlists">
+      <div style="margin-top:8px">
+        <a class="row" href="queue.html">
+          <div class="lead sq">
+            <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/></svg>
+          </div>
+          <div class="grow">
+            <div class="t">Evening Drive</div>
+            <div class="s">42 songs</div>
+          </div>
+          <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </a>
+        <a class="row" href="queue.html">
+          <div class="lead sq">
+            <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/></svg>
+          </div>
+          <div class="grow">
+            <div class="t">Focus</div>
+            <div class="s">28 songs</div>
+          </div>
+          <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </a>
+        <a class="row" href="queue.html">
+          <div class="lead sq">
+            <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/></svg>
+          </div>
+          <div class="grow">
+            <div class="t">Workout</div>
+            <div class="s">17 songs</div>
+          </div>
+          <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <a class="miniplayer" href="player.html">
+      <span class="hairline"></span>
+      <div class="art art-xs" style="--g1:#f6d365;--g2:#fda085"><span>MK</span></div>
+      <div class="grow">
+        <div class="t">Time (You and I)</div>
+        <div class="s">Khruangbin</div>
+      </div>
+      <button class="iconbtn primary" data-playtoggle aria-label="Play or pause">
+        <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+    </a>
+
+    <nav class="bottomnav">
+      <a class="nav-item" href="home.html">
+        <span class="nav-pill"><svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span>
+        Home
+      </a>
+      <a class="nav-item active" href="library.html">
+        <span class="nav-pill"><svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 5h-3v5.5c0 1.38-1.12 2.5-2.5 2.5S10 13.88 10 12.5s1.12-2.5 2.5-2.5c.57 0 1.08.19 1.5.51V5h4v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"/></svg></span>
+        Library
+      </a>
+      <a class="nav-item" href="downloads.html">
+        <span class="nav-pill"><svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg></span>
+        Downloads
+      </a>
+      <a class="nav-item" href="settings.html">
+        <span class="nav-pill"><svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></span>
+        Settings
+      </a>
+    </nav>
+  </div>
+  <div class="gesturebar"><span class="pill"></span></div>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

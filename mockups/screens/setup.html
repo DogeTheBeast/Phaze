@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phaze2 — Server Connection</title>
+<link rel="stylesheet" href="../assets/app.css">
+</head>
+<body class="stage">
+<div class="phone">
+  <div class="statusbar">
+    <span class="time">9:41</span>
+    <span class="status-icons">
+      <svg class="i12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+      <svg class="i14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="17" height="10" rx="2.5"/><rect x="4" y="9" width="10" height="6" rx="1" fill="currentColor" stroke="none"/><path d="M21 10v4" stroke-linecap="round"/></svg>
+    </span>
+  </div>
+  <div class="screen">
+    <div class="setup-wrap">
+      <div class="logo">
+        <svg class="i36" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+      </div>
+      <div style="text-align:center">
+        <div class="display">Phaze2</div>
+        <div class="caption" style="margin-top:4px">Connect to your Subsonic server</div>
+      </div>
+
+      <div class="section" style="margin:0"><h2>Saved servers</h2></div>
+      <div class="row">
+        <div class="lead">
+          <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 13H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zM7 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM20 3H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zM7 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+        </div>
+        <div class="grow">
+          <div class="t">Home server</div>
+          <div class="s" style="margin-top:0">https://music.example.com</div>
+        </div>
+        <svg class="i20" style="color:var(--primary)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+      </div>
+
+      <div class="divider"></div>
+
+      <div>
+        <div class="field-label">Server URL</div>
+        <div class="field">
+          <svg class="i24 f-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 13H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zM7 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM20 3H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zM7 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+          <input type="text" value="https://music.example.com" readonly aria-label="Server URL">
+        </div>
+      </div>
+
+      <div>
+        <div class="field-label">Username</div>
+        <div class="field">
+          <svg class="i24 f-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          <input type="text" value="doge" readonly aria-label="Username">
+        </div>
+      </div>
+
+      <div>
+        <div class="field-label">Password</div>
+        <div class="field">
+          <svg class="i24 f-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <input type="password" value="password" readonly aria-label="Password">
+        </div>
+      </div>
+
+      <a class="btn btn-filled btn-block" href="home.html">
+        <svg class="i20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        Connect
+      </a>
+
+      <div style="text-align:center">
+        <button class="btn btn-text">Test connection</button>
+      </div>
+
+      <div class="row" style="justify-content:center; min-height:32px">
+        <svg class="i18" style="color:var(--downloaded)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        <span class="caption">Connected · Navidrome 0.52.5</span>
+      </div>
+
+    </div>
+  </div>
+  <div class="gesturebar"><span class="pill"></span></div>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>
