@@ -55,6 +55,7 @@
             pkgs.kotlin
             pkgs.git
             pkgs.pre-commit
+            pkgs.prettierd
           ];
 
           shellHook = ''
