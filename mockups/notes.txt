@@ -1,0 +1,17 @@
+Use a better font
+
+
+Below the app logo, have some common shortcuts (Shuffle all songs) (Choose a random album or something)
+
+Now playing album art takes most of the screen
+Next, previous and pause and play
+
+Bottom bar becomes, like, shuffle and options (maybe)
+
+Library page is just widget tiles
+Albums, artists, genres, songs, playlists, years
+
+Use outfit as the font
+
+Background of the home page should be a gradient from the corner
+No need for a downloaded indicator

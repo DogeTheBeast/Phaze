@@ -1,84 +1,254 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Phaze2 — Now Playing</title>
-<link rel="stylesheet" href="../assets/app.css">
-</head>
-<body class="stage">
-<div class="phone">
-  <div class="statusbar">
-    <span class="time">9:41</span>
-    <span class="status-icons">
-      <svg class="i12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
-      <svg class="i14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="17" height="10" rx="2.5"/><rect x="4" y="9" width="10" height="6" rx="1" fill="currentColor" stroke="none"/><path d="M21 10v4" stroke-linecap="round"/></svg>
-    </span>
-  </div>
-  <div class="screen">
-    <header class="appbar">
-      <a class="iconbtn side" href="home.html" aria-label="Back">
-        <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-      </a>
-      <span class="center-cap">Playing from album · Mordechai</span>
-      <button class="iconbtn side" aria-label="More">
-        <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
-      </button>
-    </header>
-
-    <div class="content" style="display:flex;flex-direction:column;align-items:center;padding-top:20px">
-      <div class="art art-player" style="--g1:#f6d365;--g2:#fda085">
-        <span>MK</span>
-        <span class="dl-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phaze2 — Now Playing</title>
+    <link rel="stylesheet" href="../assets/app.css" />
+  </head>
+  <body class="stage">
+    <div class="phone">
+      <div class="statusbar">
+        <span class="time">9:41</span>
+        <span class="status-icons">
+          <svg
+            class="i12"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"
+            />
+          </svg>
+          <svg
+            class="i14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <rect x="2" y="7" width="17" height="10" rx="2.5" />
+            <rect
+              x="4"
+              y="9"
+              width="10"
+              height="6"
+              rx="1"
+              fill="currentColor"
+              stroke="none"
+            />
+            <path d="M21 10v4" stroke-linecap="round" />
+          </svg>
+        </span>
       </div>
+      <div class="screen">
+        <a class="backfab" href="home.html" aria-label="Back"
+          ><svg
+            class="i24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+            /></svg
+        ></a>
+        <header class="appbar">
+          <a class="iconbtn side" href="home.html" aria-label="Back">
+            <svg
+              class="i24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+              />
+            </svg>
+          </a>
+          <span class="center-cap">Playing from album · Mordechai</span>
+          <button class="iconbtn side" aria-label="More">
+            <svg
+              class="i24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+              />
+            </svg>
+          </button>
+        </header>
 
-      <div class="display" style="margin-top:24px">Time (You and I)</div>
-      <a class="caption" href="artist.html" style="color:var(--primary);margin-top:4px">Khruangbin</a>
+        <div
+          class="content"
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+          "
+        >
+          <div
+            class="art art-player"
+            style="--g1: #f6d365; --g2: #fda085; margin-top: 24px"
+          >
+            <span>MK</span>
+            <span class="dl-badge"
+              ><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                /></svg
+            ></span>
+          </div>
 
-      <div style="width:100%;margin-top:24px">
-        <div class="seek">
-          <div class="track">
-            <div class="buffered"></div>
-            <div class="fill"></div>
-            <div class="thumb"></div>
+          <div class="display" style="margin-top: 24px">Time (You and I)</div>
+          <a
+            class="caption"
+            href="artist.html"
+            style="color: var(--primary); margin-top: 4px"
+            >Khruangbin</a
+          >
+
+          <div style="width: 100%; margin-top: auto">
+            <div class="seek">
+              <div class="track">
+                <div class="buffered"></div>
+                <div class="fill"></div>
+                <div class="thumb"></div>
+              </div>
+            </div>
+            <div class="seek-times"><span>2:07</span><span>5:42</span></div>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 20px;
+              margin-top: 12px;
+            "
+          >
+            <svg
+              class="i24"
+              style="color: var(--on-surface-variant)"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"
+              />
+            </svg>
+            <button class="iconbtn" aria-label="Previous">
+              <svg
+                class="i32"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
+              </svg>
+            </button>
+            <button class="fab" aria-label="Pause">
+              <svg
+                class="i32"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+              </svg>
+            </button>
+            <button class="iconbtn" aria-label="Next">
+              <svg
+                class="i32"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+              </svg>
+            </button>
+            <svg
+              class="i24"
+              style="color: var(--on-surface-variant)"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"
+              />
+            </svg>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 16px;
+              margin-top: 28px;
+            "
+          >
+            <span class="chip active">
+              <svg
+                class="i14"
+                style="color: var(--downloaded)"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+              FLAC · 1411 kbps
+            </span>
+            <button class="iconbtn" aria-label="Lyrics">
+              <svg
+                class="i24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+                />
+              </svg>
+            </button>
+            <button class="iconbtn" aria-label="Cast">
+              <svg
+                class="i24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M21 3H3c-1.1 0-2 .9-2 2v3h2V5h18v14h-7v2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM1 18v3h3c0-1.66-1.34-3-3-3zm0-4v2c2.76 0 5 2.24 5 5h2c0-3.87-3.13-7-7-7zm0-4v2c4.97 0 9 4.03 9 9h2c0-6.08-4.93-11-11-11z"
+                />
+              </svg>
+            </button>
+            <a class="iconbtn primary" href="queue.html" aria-label="Up next">
+              <svg
+                class="i24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
-        <div class="seek-times"><span>2:07</span><span>5:42</span></div>
       </div>
-
-      <div style="display:flex;align-items:center;gap:20px;margin-top:12px">
-        <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
-        <button class="iconbtn" aria-label="Previous">
-          <svg class="i32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
-        </button>
-        <button class="fab" aria-label="Pause">
-          <svg class="i32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-        </button>
-        <button class="iconbtn" aria-label="Next">
-          <svg class="i32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
-        </button>
-        <svg class="i24" style="color:var(--on-surface-variant)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
-      </div>
-
-      <div style="display:flex;align-items:center;gap:16px;margin-top:28px">
-        <span class="chip active">
-          <svg class="i14" style="color:var(--downloaded)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-          FLAC · 1411 kbps
-        </span>
-        <button class="iconbtn" aria-label="Lyrics">
-          <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-        </button>
-        <button class="iconbtn" aria-label="Cast">
-          <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 3H3c-1.1 0-2 .9-2 2v3h2V5h18v14h-7v2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM1 18v3h3c0-1.66-1.34-3-3-3zm0-4v2c2.76 0 5 2.24 5 5h2c0-3.87-3.13-7-7-7zm0-4v2c4.97 0 9 4.03 9 9h2c0-6.08-4.93-11-11-11z"/></svg>
-        </button>
-        <a class="iconbtn primary" href="queue.html" aria-label="Up next">
-          <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/></svg>
-        </a>
-      </div>
+      <div class="gesturebar"><span class="pill"></span></div>
     </div>
-  </div>
-  <div class="gesturebar"><span class="pill"></span></div>
-</div>
-<script src="../assets/app.js"></script>
-</body>
+    <script src="../assets/app.js"></script>
+  </body>
 </html>
