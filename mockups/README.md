@@ -36,7 +36,7 @@ mockups/
     ├── player.html       now playing
     ├── queue.html        up next
     ├── downloads.html    storage + downloaded items + offline switches
-    ├── search.html       search with grouped results
+    ├── search.html       search bar + recent searches + 3-col category grid (albums / artists / genres / songs / playlists / years / moods)
     └── settings.html     server / playback / downloads / offline / appearance
 ```
 

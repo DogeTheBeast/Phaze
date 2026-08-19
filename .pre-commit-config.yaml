@@ -17,3 +17,11 @@ repos:
         language: system
         files: \.html$
         pass_filenames: true
+  # - repo: local
+  #   hooks:
+  #     - id: ktlint
+  #       name: Kotlin formatting
+  #       entry: ./gradlew ktlintFormat
+  #       language: system
+  #       files: \.kt$
+  #       pass_filenames: false

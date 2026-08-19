@@ -19,11 +19,12 @@ import com.example.phaze2.ui.screens.setup.SetupScreen
 @Composable
 fun Phaze2NavHost(
     navController: NavHostController,
+    startDestination: String,
     modifier: Modifier = Modifier
 ) {
     NavHost(
         navController = navController,
-        startDestination = Routes.HOME,
+        startDestination = startDestination,
         modifier = modifier
     ) {
         composable(Routes.SETUP) { SetupScreen(navController) }

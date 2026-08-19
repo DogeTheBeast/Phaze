@@ -1025,6 +1025,36 @@ svg {
   text-align: left;
 }
 
+/* Search category tiles (3-col square grid) */
+.searchgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 8px 0 2px;
+}
+.scat {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(160deg, var(--surface-container), var(--surface-container-low));
+  border-radius: 18px;
+  color: var(--on-surface);
+  text-align: center;
+}
+.scat svg {
+  width: 40px;
+  height: 40px;
+  color: var(--primary);
+}
+.scat .sc-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--on-surface);
+}
+
 /* Home hero (top ~20%): app logo banner in place of the greeting */
 .home-hero {
   flex: none;

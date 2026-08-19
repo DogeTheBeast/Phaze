@@ -58,24 +58,25 @@
           ];
 
           shellHook = ''
-            export ANDROID_SDK_ROOT="${androidSdk}/libexec/android-sdk"
-            export ANDROID_HOME="$ANDROID_SDK_ROOT"
-            export JAVA_HOME="${pkgs.jdk17.home}"
+            						export ANDROID_SDK_ROOT="${androidSdk}/libexec/android-sdk"
+            						export ANDROID_HOME="$ANDROID_SDK_ROOT"
+            						export JAVA_HOME="${pkgs.jdk17.home}"
+            						export GRADLE_OPTS="-Dorg.gradle.project.android.aapt2FromMavenOverride=${androidSdk}/libexec/android-sdk/build-tools/34.0.0/aapt2"
 
-            echo "Phaze2 dev shell ready."
-            echo "  Android SDK: $ANDROID_SDK_ROOT"
-            echo "  JAVA_HOME:   $JAVA_HOME"
-            echo ""
-            echo "Quick start:"
-            echo "  ./gradlew assembleDebug"
-            echo "  ./gradlew connectedCheck   # needs a device / emulator"
-            echo ""
+            						echo "Phaze dev shell ready."
+            						echo "  Android SDK: $ANDROID_SDK_ROOT"
+            						echo "  JAVA_HOME:   $JAVA_HOME"
+            						echo ""
+            						echo "Quick start:"
+            						echo "  ./gradlew assembleDebug"
+            						echo "  ./gradlew connectedCheck   # needs a device / emulator"
+            						echo ""
 
-            # Install pre-commit hooks if not already present
-            if [ -f .pre-commit-config.yaml ] && [ ! -d .git/hooks/pre-commit ]; then
-              echo "Installing pre-commit hooks..."
-              pre-commit install
-            fi
+            						# Install pre-commit hooks if not already present
+            						if [ -f .pre-commit-config.yaml ] && [ ! -d .git/hooks/pre-commit ]; then
+            							echo "Installing pre-commit hooks..."
+            							pre-commit install
+            						fi
           '';
         };
 

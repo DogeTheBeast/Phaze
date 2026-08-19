@@ -39,6 +39,14 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    testOptions {
+        unitTests {
+            // Let android.util.Log (and other Android stubs) be no-ops on the
+            // local JVM instead of throwing "not mocked", so unit tests can
+            // exercise code that logs.
+            isReturnDefaultValues = true
+        }
+    }
     buildFeatures {
         compose = true
     }
