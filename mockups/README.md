@@ -1,4 +1,4 @@
-# Phaze2 — UI Mockups
+# Phaze — UI Mockups
 
 Static, self-contained HTML/CSS mockups for a **Subsonic-compatible Android music player**
 (Navidrome / Airsonic / Gonic …) with **offline download support**. Material Design 3,

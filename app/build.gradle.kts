@@ -1,19 +1,20 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.composeCompiler)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hiltAndroid)
     alias(libs.plugins.kotlinSerialization)
 }
 
 android {
-    namespace = "com.example.phaze2"
-    compileSdk = 34
+    namespace = "com.example.phaze"
+    compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.example.phaze2"
+        applicationId = "com.example.phaze"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 37
         versionCode = 1
         versionName = "0.1.0"
 
@@ -39,6 +40,29 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+    // Optional release signing: activated only when KEYSTORE_PATH and passwords
+    // are provided (e.g. as CI secrets). Without them the release APK stays unsigned.
+    val keystorePath = System.getenv("KEYSTORE_PATH")
+    val hasReleaseSigning = !keystorePath.isNullOrBlank() && File(keystorePath).exists()
+
+    if (hasReleaseSigning) {
+        signingConfigs {
+            create("release") {
+                storeFile = File(keystorePath)
+                storePassword = System.getenv("KEYSTORE_PASSWORD") ?: ""
+                keyAlias = System.getenv("KEY_ALIAS") ?: ""
+                keyPassword = System.getenv("KEY_PASSWORD") ?: ""
+            }
+        }
+    }
+    buildTypes {
+        release {
+            if (hasReleaseSigning) {
+                signingConfig = signingConfigs.getByName("release")
+            }
+        }
+    }
     testOptions {
         unitTests {
             // Let android.util.Log (and other Android stubs) be no-ops on the
@@ -49,9 +73,6 @@ android {
     }
     buildFeatures {
         compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.10"
     }
     packaging {
         resources {
@@ -102,6 +123,7 @@ dependencies {
     implementation(libs.androidx.media3.exoplayer)
     implementation(libs.androidx.media3.session)
     implementation(libs.androidx.media3.ui)
+    implementation(libs.androidx.media3.okhttp)
 
     // Coil
     implementation(libs.coil.compose)

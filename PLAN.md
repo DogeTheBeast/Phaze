@@ -1,4 +1,4 @@
-# Phaze2 — Implementation Plan
+# Phaze — Implementation Plan
 
 > OpenSubsonic-compatible Android music player with offline support.
 > Written in Kotlin with Jetpack Compose, Material 3, and Media3.
@@ -339,8 +339,8 @@ SongEntity.downloadState
 ## 11. Project Structure (suggested)
 
 ```
-app/src/main/java/com/example/phaze2/
-├── Phaze2Application.kt
+app/src/main/java/com/example/phaze/
+├── PhazeApplication.kt
 ├── di/
 │   ├── AppModule.kt          (singletons: DB, Retrofit, ExoPlayer, DataStore)
 │   ├── RepositoryModule.kt
@@ -376,7 +376,7 @@ app/src/main/java/com/example/phaze2/
 │   │   ├── search/
 │   │   └── settings/
 │   └── navigation/
-│       └── Phaze2NavHost.kt
+│       └── PhazeNavHost.kt
 └── worker/
     ├── LibrarySyncWorker.kt
     ├── DownloadWorker.kt

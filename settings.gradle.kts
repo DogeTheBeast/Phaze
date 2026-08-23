@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Phaze2"
+rootProject.name = "Phaze"
 include(":app")

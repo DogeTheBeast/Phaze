@@ -27,8 +27,8 @@
         # to your Studio-managed path in the shellHook below.
         androidComposition = pkgs.androidenv.composeAndroidPackages {
           cmdLineToolsVersion = "11.0";
-          platformVersions = [ "34" ];
-          buildToolsVersions = [ "34.0.0" ];
+          platformVersions = [ "37" ];
+          buildToolsVersions = [ "35.0.0" ];
           includeEmulator = false;
           includeSources = false;
           includeSystemImages = false;
@@ -62,7 +62,7 @@
             						export ANDROID_SDK_ROOT="${androidSdk}/libexec/android-sdk"
             						export ANDROID_HOME="$ANDROID_SDK_ROOT"
             						export JAVA_HOME="${pkgs.jdk17.home}"
-            						export GRADLE_OPTS="-Dorg.gradle.project.android.aapt2FromMavenOverride=${androidSdk}/libexec/android-sdk/build-tools/34.0.0/aapt2"
+            						export GRADLE_OPTS="-Dorg.gradle.project.android.aapt2FromMavenOverride=${androidSdk}/libexec/android-sdk/build-tools/35.0.0/aapt2"
 
             						echo "Phaze dev shell ready."
             						echo "  Android SDK: $ANDROID_SDK_ROOT"

@@ -5,24 +5,25 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
 				android:usesCleartextTraffic="true"
-        android:name=".Phaze2Application"
+        android:name=".PhazeApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Phaze2"
+        android:theme="@style/Theme.Phaze"
         tools:targetApi="34">
 
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Phaze2"
+            android:theme="@style/Theme.Phaze"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +38,6 @@
             tools:ignore="ExportedService">
             <intent-filter>
                 <action android:name="androidx.media3.session.MediaSessionService" />
-                <action android:name="android.media.browse.MediaBrowserService" />
             </intent-filter>
         </service>
 

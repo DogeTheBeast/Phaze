@@ -1,5 +1,5 @@
 /* ============================================================
-   Phaze2 mockups — tiny progressive-enhancement behaviors
+   Phaze mockups — tiny progressive-enhancement behaviors
    (everything renders correctly with JS disabled)
    ============================================================ */
 

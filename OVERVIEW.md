@@ -1,14 +1,14 @@
-# Phaze2 — Mockup Implementation Spec
+# Phaze — Mockup Implementation Spec
 
 > **Purpose of this file:** Complete, self-contained context for a coding agent to implement
-> the Phaze2 UI mockups. You need no other information. Follow this spec exactly; where it is
+> the Phaze UI mockups. You need no other information. Follow this spec exactly; where it is
 > silent, make the simplest reasonable choice and keep it consistent.
 
 ---
 
 ## 1. Product context
 
-**Phaze2** is an Android music player for **Subsonic-compatible servers** (Navidrome, Airsonic,
+**Phaze** is an Android music player for **Subsonic-compatible servers** (Navidrome, Airsonic,
 Gonic, etc.). Core value props: stream from your own server, and **download music for offline
 playback**. These mockups are the design reference for a future Jetpack Compose (Material 3)
 app, so every visual decision should map to Material Design 3 concepts.
@@ -62,7 +62,7 @@ Each screen is a **standalone page** (opens directly in a browser and looks corr
 
 Every HTML file: `<!doctype html>`, `<html lang="en">`, `<meta charset="utf-8">`,
 `<meta name="viewport" content="width=device-width, initial-scale=1">`, title format
-`Phaze2 — <Screen Name>`.
+`Phaze — <Screen Name>`.
 
 ---
 
@@ -285,7 +285,7 @@ home, library, downloads, settings. Screens with mini-player: home, library, dow
 
 ### 9.1 `setup.html` — Server connection (no app bar, no nav)
 - Centered column, 24px padding: logo = 72px tonal circle (`primary-container`) with 36px
-  `music_note` in `on-primary-container`; title "Phaze2" (display); caption
+  `music_note` in `on-primary-container`; title "Phaze" (display); caption
   "Connect to your Subsonic server".
 - Outlined text fields (label floats on top border; pre-fill values): **Server URL** =
   `https://music.example.com` (leading `dns` icon) · **Username** = `doge` (leading
@@ -298,7 +298,7 @@ home, library, downloads, settings. Screens with mini-player: home, library, dow
   "Home server", caption `https://music.example.com`, trailing `check` in `--primary`.
 
 ### 9.2 `home.html` — Home (app bar + content + mini-player + bottom nav "Home" active)
-- App bar: title "Phaze2"; right icons: `search` (→ `search.html`), `settings`
+- App bar: title "Phaze"; right icons: `search` (→ `search.html`), `settings`
   (→ `settings.html`).
 - Offline banner (demonstrates the offline state): `cloud_off` + "Offline mode ·
   214 songs available".
@@ -410,14 +410,14 @@ Grouped list rows with small caption group headers:
 - **Library** — switch ON "Scrobble plays to server" · switch OFF "Show offline banner".
 - **Appearance** — "Theme" value "Dark" · accent color row: 5 small circles
   (`#D0BCFF` selected with ring, plus `#A8DAB5`, `#EFB8C8`, `#89F7FE`, `#F6D365`).
-- **About** — "Phaze2" caption "Version 0.1.0-mock · Design mockup".
+- **About** — "Phaze" caption "Version 0.1.0-mock · Design mockup".
 
 ---
 
 ## 10. `index.html` — the gallery (viewer entry point)
 
 Desktop-style page (no phone frame): `--page-bg` background, centered header block:
-title "Phaze2", caption "Subsonic client — UI mockups · Material 3 dark". Below, a
+title "Phaze", caption "Subsonic client — UI mockups · Material 3 dark". Below, a
 responsive grid (`repeat(auto-fill, minmax(230px, 1fr))`, gap 28px, max-width 1400px).
 Each tile: screen label (label type, on-surface) + a fixed-size wrapper
 (227×492px ≈ 412×892 × 0.55) containing `<iframe src="screens/NAME.html" scrolling="no"

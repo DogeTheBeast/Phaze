@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phaze — Browse</title>
+<link rel="stylesheet" href="../assets/app.css">
+</head>
+<body class="stage">
+<div class="phone">
+  <div class="statusbar">
+    <span class="time">9:41</span>
+    <span class="status-icons">
+      <svg class="i12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+      <svg class="i14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="17" height="10" rx="2.5"/><rect x="4" y="9" width="10" height="6" rx="1" fill="currentColor" stroke="none"/><path d="M21 10v4" stroke-linecap="round"/></svg>
+    </span>
+  </div>
+  <div class="screen">
+    <a class="backfab" href="home.html" aria-label="Back">
+      <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+    </a>
+
+    <div class="content">
+      <!-- One shared screen for every Home filter tile, with a grid/list view toggle. -->
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; padding-top:64px">
+        <div>
+          <div class="display">Albums</div>
+          <div class="caption" id="count" style="margin-top:4px">8 albums</div>
+        </div>
+        <button class="iconbtn" id="toggle" aria-label="Toggle view" title="Grid / list view" onclick="toggleView()">
+          <span id="iconGrid">
+            <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h6v6H4V4zm10 0h6v6h-6V4zM4 14h6v6H4v-6zm10 0h6v6h-6v-6z"/></svg>
+          </span>
+          <span class="hidden" id="iconList">
+            <svg class="i24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+          </span>
+        </button>
+      </div>
+
+      <div class="grid2" id="grid" style="margin-top:18px"><!-- cards rendered by script --></div>
+      <div class="hidden" id="list" style="margin-top:8px"><!-- rows rendered by script --></div>
+    </div>
+  </div>
+  <div class="gesturebar"><span class="pill"></span></div>
+</div>
+
+<script>
+  const ALBUMS = [
+    { i:'MK', g:'#f6d365,#fda085', t:'Mordechai', a:'Khruangbin', y:2020 },
+    { i:'TI', g:'#a18cd1,#fbc2eb', t:'Currents', a:'Tame Impala', y:2015 },
+    { i:'NJ', g:'#667eea,#764ba2', t:'Modal Soul', a:'Nujabes', y:2005 },
+    { i:'FF', g:'#89f7fe,#66a6ff', t:'Helplessness Blues', a:'Fleet Foxes', y:2011 },
+    { i:'RH', g:'#f83600,#f9d423', t:'In Rainbows', a:'Radiohead', y:2007 },
+    { i:'BM', g:'#0ba360,#3cba92', t:'Migration', a:'Bonobo', y:2017 },
+    { i:'SS', g:'#c79081,#dfa579', t:'Carrie &amp; Lowell', a:'Sufjan Stevens', y:2015 },
+    { i:'MI', g:'#30cfd0,#330867', t:'Untourable Album', a:'Men I Trust', y:2021 },
+  ];
+  const checkSVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>';
+  const starSVG  = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24z"/></svg>';
+
+  const grid = document.getElementById('grid');
+  const list = document.getElementById('list');
+
+  ALBUMS.forEach(alb => {
+    const [g1, g2] = alb.g.split(',');
+    // Grid card
+    grid.insertAdjacentHTML('beforeend',
+      '<a class="card" href="album.html">' +
+        `<div class="art art-card" style="--g1:${g1};--g2:${g2}"><span>${alb.i}</span></div>` +
+        `<div class="t">${alb.t}</div><div class="s">${alb.a} · ${alb.y}</div></a>`);
+    // List row
+    list.insertAdjacentHTML('beforeend',
+      '<a class="row" href="album.html">' +
+        `<div class="art art-row" style="--g1:${g1};--g2:${g2}"><span>${alb.i}</span></div>` +
+        `<div class="grow"><div class="t">${alb.t}</div><div class="s">${alb.a} · ${alb.y}</div></div>` +
+        `<span class="i18" style="color:var(--tertiary)">${starSVG}</span>` +
+      '</a>');
+  });
+
+  function toggleView() {
+    document.getElementById('grid').classList.toggle('hidden');
+    document.getElementById('list').classList.toggle('hidden');
+    document.getElementById('iconGrid').classList.toggle('hidden');
+    document.getElementById('iconList').classList.toggle('hidden');
+  }
+</script>
+</body>
+</html>
