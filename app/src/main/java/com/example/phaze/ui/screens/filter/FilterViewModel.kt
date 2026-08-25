@@ -41,11 +41,19 @@ class FilterViewModel @Inject constructor(
     private val type = FilterType.fromKey(savedStateHandle["type"])
     private val _isLoading = MutableStateFlow(true)
 
+    // Random albums are snapshotted once per visit (ViewModel lifetime) so the
+    // page keeps the same set when navigating back — it only re-shuffles when
+    // the Random tile is reopened from Home.
+    private val randomAlbums = MutableStateFlow<List<Album>>(emptyList())
+
     private val content: kotlinx.coroutines.flow.Flow<FilterUiState> = when (type.kind) {
-        FilterType.Kind.ALBUMS ->
-            combine(libraryRepository.observeAlbums(type.key), _isLoading) { albums, loading ->
+        FilterType.Kind.ALBUMS -> {
+            val albums: kotlinx.coroutines.flow.Flow<List<Album>> =
+                if (type == FilterType.RANDOM) randomAlbums else libraryRepository.observeAlbums(type.key)
+            combine(albums, _isLoading) { albums, loading ->
                 FilterUiState(type = type, albums = albums, isLoading = loading)
             }
+        }
         FilterType.Kind.ARTISTS ->
             combine(libraryRepository.observeArtists(), _isLoading) { artists, loading ->
                 FilterUiState(type = type, artists = artists, isLoading = loading)
@@ -76,6 +84,9 @@ class FilterViewModel @Inject constructor(
         viewModelScope.launch {
             _isLoading.value = true
             libraryRepository.syncFilter(type.key)
+            if (type == FilterType.RANDOM) {
+                randomAlbums.value = libraryRepository.getRandomAlbums()
+            }
             _isLoading.value = false
         }
     }

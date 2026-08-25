@@ -32,6 +32,10 @@ interface AlbumDao {
     @Query("SELECT * FROM albums ORDER BY RANDOM() LIMIT :limit")
     fun observeRandom(limit: Int): Flow<List<AlbumEntity>>
 
+    /** One-shot random snapshot (stable per call — used by the Random filter). */
+    @Query("SELECT * FROM albums ORDER BY RANDOM() LIMIT :limit")
+    suspend fun getRandom(limit: Int): List<AlbumEntity>
+
     /** "Least played" (filter page). */
     @Query("SELECT * FROM albums ORDER BY playCount ASC LIMIT :limit")
     fun observeLeastPlayed(limit: Int): Flow<List<AlbumEntity>>

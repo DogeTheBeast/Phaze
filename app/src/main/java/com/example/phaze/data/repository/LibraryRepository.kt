@@ -97,6 +97,15 @@ class LibraryRepository @Inject constructor(
     fun observePlaylists(): Flow<List<Playlist>> =
         playlistDao.observeAll().map { list -> list.map { it.toModel() } }
 
+    /**
+     * A single random snapshot for the Random filter page. Captured once per
+     * visit so navigating back doesn't re-shuffle the albums.
+     */
+    suspend fun getRandomAlbums(limit: Int = 100): List<Album> {
+        val server = serverRepository.getActiveServer()
+        return albumDao.getRandom(limit).map { it.toModel(server?.url) }
+    }
+
     // ---- Sync ----
 
     /**

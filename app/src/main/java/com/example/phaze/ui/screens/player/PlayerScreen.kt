@@ -76,7 +76,7 @@ fun PlayerScreen(
                 coverUrl = state.coverArtUrl,
                 name = state.title,
                 modifier = Modifier
-                    .fillMaxWidth(0.88f)
+                    .fillMaxWidth(1f)
                     .aspectRatio(1f),
             )
 
