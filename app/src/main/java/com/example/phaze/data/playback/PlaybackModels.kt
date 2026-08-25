@@ -14,6 +14,8 @@ data class PlaybackUiState(
     val title: String = "",
     val artist: String = "",
     val album: String = "",
+    val albumId: String? = null,
+    val artistId: String? = null,
     val coverArtUrl: String? = null,
     val isPlaying: Boolean = false,
     val isShuffle: Boolean = false,

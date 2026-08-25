@@ -1,9 +1,11 @@
 package com.example.phaze.data.playback
 
 import android.net.Uri
+import android.os.Bundle
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import com.example.phaze.data.model.Song
+import com.example.phaze.data.remote.CoverArtUrl
 import com.example.phaze.data.repository.ServerRepository
 import java.io.File
 import javax.inject.Inject
@@ -53,7 +55,13 @@ class PlaybackRepository @Inject constructor(
                     .setTitle(song.title)
                     .setArtist(song.artistName)
                     .setAlbumTitle(song.albumName)
-                    .setArtworkUri(song.coverArtUrl?.let { Uri.parse(it) })
+                    .setArtworkUri(song.coverArtUrl?.let { upgradeCoverResolution(it, CoverArtUrl.FULL) }?.let { Uri.parse(it) })
+                    .setExtras(
+                        Bundle().apply {
+                            song.albumId?.let { putString(KEY_ALBUM_ID, it) }
+                            song.artistId?.let { putString(KEY_ARTIST_ID, it) }
+                        }
+                    )
                     .build()
             )
             .build()
@@ -61,4 +69,26 @@ class PlaybackRepository @Inject constructor(
 
     suspend fun mediaItems(songs: List<Song>, maxBitRate: Int? = null, format: String? = null): List<MediaItem> =
         songs.mapNotNull { mediaItem(it, maxBitRate, format) }
+
+    /**
+     * Rebuilds a `getCoverArt` URL at a higher [size] while keeping the same
+     * art id and server base (including subpaths). Falls back to the input if
+     * it isn't a cover-art URL.
+     */
+    private fun upgradeCoverResolution(url: String, size: Int): String {
+        val uri = Uri.parse(url)
+        val artId = uri.getQueryParameter("id") ?: return url
+        return uri.buildUpon()
+            .clearQuery()
+            .appendQueryParameter("id", artId)
+            .appendQueryParameter("size", size.toString())
+            .build()
+            .toString()
+    }
+
+    companion object {
+        /** Bundle keys carrying navigation ids inside the MediaItem metadata extras. */
+        const val KEY_ALBUM_ID = "albumId"
+        const val KEY_ARTIST_ID = "artistId"
+    }
 }

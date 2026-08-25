@@ -22,6 +22,7 @@ data class Song(
     val id: String,
     val title: String,
     val artistName: String,
+    val artistId: String? = null,
     val albumName: String? = null,
     val albumId: String? = null,
     val duration: Int = 0,

@@ -89,6 +89,10 @@ fun PlayerScreen(
                 fontWeight = FontWeight.SemiBold,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
+                modifier = Modifier
+                    .clickable(enabled = state.albumId != null) {
+                        state.albumId?.let { navController.navigate(Routes.album(it)) }
+                    },
             )
             Spacer(Modifier.height(4.dp))
             Text(
@@ -97,6 +101,10 @@ fun PlayerScreen(
                 color = MaterialTheme.colorScheme.primary,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
+                modifier = Modifier
+                    .clickable(enabled = state.artistId != null) {
+                        state.artistId?.let { navController.navigate(Routes.artist(it)) }
+                    },
             )
 
             Spacer(Modifier.height(24.dp))

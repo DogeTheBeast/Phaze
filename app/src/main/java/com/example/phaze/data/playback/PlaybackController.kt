@@ -142,6 +142,8 @@ class PlaybackController @Inject constructor(
             title = meta?.title?.toString().orEmpty().ifEmpty { c.currentMediaItem?.mediaId.orEmpty() },
             artist = meta?.artist?.toString().orEmpty(),
             album = meta?.albumTitle?.toString().orEmpty(),
+            albumId = meta?.extras?.getString(PlaybackRepository.KEY_ALBUM_ID),
+            artistId = meta?.extras?.getString(PlaybackRepository.KEY_ARTIST_ID),
             coverArtUrl = meta?.artworkUri?.toString(),
             isPlaying = c.isPlaying,
             isShuffle = c.shuffleModeEnabled,
