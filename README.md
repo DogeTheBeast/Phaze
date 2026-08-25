@@ -1,6 +1,10 @@
-# Phaze
+<div align="center">
 
-<br/> <img src="docs/hero.png" width="220">
+<img src="docs/hero.png" alt="Logo" width="200">
+
+<h1>Phaze</h1>
+
+</div>
 
 > My personal music player app
 
@@ -13,10 +17,12 @@ music playing — even when the phone is in your pocket.
 
 ## 📸 Screenshots
 
-| | | |
+| **Hero** | **Now Playing** | **Search** |
 |---|---|---|
-| **Home** <br/> <img src="docs/screenshots/home.png" width="220"> | **Now Playing** <br/> <img src="docs/screenshots/player.png" width="220"> | **Search** <br/> <img src="docs/screenshots/search.png" width="220"> |
-| **Album** <br/> <img src="docs/screenshots/album.png" width="220"> | **Artist** <br/> <img src="docs/screenshots/artist.png" width="220"> | **Settings** <br/> <img src="docs/screenshots/settings.png" width="220"> |
+| <img src="docs/screenshots/home.png" width="220"> | <img src="docs/screenshots/player.png" width="220"> | <img src="docs/screenshots/search.png" width="220"> |
+| **Album** | **Artist** | **Settings** |
+|---|---|---|
+| <img src="docs/screenshots/album.png" width="220"> | <img src="docs/screenshots/artist.png" width="220"> | <img src="docs/screenshots/settings.png" width="220"> |
 
 ---
 
