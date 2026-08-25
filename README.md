@@ -1,5 +1,9 @@
 # Phaze
 
+<br/> <img src="docs/hero.png" width="220">
+
+> My personal music player app
+
 A friendly, dark-themed music player for **Subsonic-compatible servers**
 (Navidrome, Airsonic, Gonic, Funkwhale…), built with Kotlin and Jetpack Compose.
 Stream your library, browse albums and artists, manage your queue, and keep the
@@ -13,9 +17,6 @@ music playing — even when the phone is in your pocket.
 |---|---|---|
 | **Home** <br/> <img src="docs/screenshots/home.png" width="220"> | **Now Playing** <br/> <img src="docs/screenshots/player.png" width="220"> | **Search** <br/> <img src="docs/screenshots/search.png" width="220"> |
 | **Album** <br/> <img src="docs/screenshots/album.png" width="220"> | **Artist** <br/> <img src="docs/screenshots/artist.png" width="220"> | **Settings** <br/> <img src="docs/screenshots/settings.png" width="220"> |
-
-> 📷 Drop your own screenshots in `docs/screenshots/` to fill this in —
-> the HTML mockups live in [`mockups/`](mockups/) as the design reference.
 
 ---
 
